@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  font-family: "Lato" sans-serif;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 45px;
+  padding: 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+a::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: -100%;
+  top: 0;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  right: -100%;
+  bottom: 0;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  left: 0;
+  bottom: -100%;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  right: 0;
+  top: -100%;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+a:hover::before {
+  left: 0;
+  width: 95%;
+}
+
+a:hover::after {
+  right: 0;
+  width: 95%;
+}
+
+a:hover span::before {
+  bottom: 0;
+  height: 90%;
+}
+a:hover span::after {
+  top: 0;
+  height: 90%;
+}
+
+a:hover {
+  border-radius: 10px;
+  overflow: hidden;
+}
