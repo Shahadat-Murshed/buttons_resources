@@ -30,9 +30,10 @@ a {
   letter-spacing: 4px;
   transition: all 0.5s;
 }
-#overflow-hidden {
+
+/* #overflow-hidden {
   overflow: hidden;
-}
+} */
 
 a:hover {
   color: #fff;
@@ -42,8 +43,7 @@ a:hover {
 span {
   position: absolute;
   background-color: #00aeff;
-  box-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff,
-    0 0 50px #00aeff;
+  box-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff, 0 0 50px #00aeff;
 }
 
 span:nth-child(1),
@@ -137,4 +137,7 @@ a:hover::before {
 a:hover {
   color: #222;
   border-radius: 10px;
+}
+a:hover #overflow-hidden {
+  overflow: visible;
 }
